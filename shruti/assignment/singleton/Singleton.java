@@ -1,7 +1,7 @@
 package shruti.assignment.singleton;
 
 public class Singleton {
-	static String s;
+	String s;
 	public static Singleton create_obj(String str){
 		/*s=str;*/
 		/*The above line is commented out since we cannot make 
