@@ -24,3 +24,12 @@ public class Main {
 	}
 }
 
+//how to compile this program in terminal
+/* javac -d .. Data.java 
+   javac -d . Data.java 
+   javac -d .. Singleton.java  
+   javac -d . Singleton.java 
+   javac -d .. Main.java 
+   javac -d . Main.java 
+   java shruti.assignment.main.Main
+*/

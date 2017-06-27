@@ -18,29 +18,32 @@ public class VampireNumber {
 		  Arrays.sort(second);
 		  return Arrays.equals(first, second);
 		}
-	static void generate(ArrayList<String> vamp, int n){
+	static void generate(ArrayList<Integer> vamp, int n){
 		int start=(int)Math.pow(10, n/2-1);
 		for(int i=start;i<start*10;i++){
 			for(int j=i;j<start*10;j++){
 				int num= i*j;
 				String a=Integer.toString(num);
 				String b=Integer.toString(i)+Integer.toString(j);
-				if(sameChars(a,b) && count<100){
+				if(sameChars(a,b) ){
 					count++;
-					vamp.add(a);
-					//System.out.println(i+" * "+j+" = "+num+"  and count is "+count);
+					vamp.add(num);
+					Collections.sort(vamp);
+					System.out.println(i+" * "+j+" = "+num+"  and count is "+count);
 				}
 			}
 		}
 	}
 	public static void main(String[] args) {
-		ArrayList<String> vamp= new ArrayList<>();
+		ArrayList<Integer> vamp= new ArrayList<>();
 		int n=2;
 		while (count<100){
 			generate(vamp,n);
 			n+=2;
 		}
-		System.out.println("The list of first "+count+" vampire numbers are:");
+		while(vamp.size()>100)
+			vamp.remove(100);
+		System.out.println("The list of first "+vamp.size()+" vampire numbers are:");
 		System.out.println(vamp);
 		//System.out.println(vamp.size());
 	}
