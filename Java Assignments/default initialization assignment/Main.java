@@ -1,6 +1,8 @@
 package shruti.assignment.main;
 import shruti.assignment.data.*;
+//import data.*;
 import shruti.assignment.singleton.*;
+//import singleton.*;
 public class Main {
 	public static void main(String args[]){
 		Data obj1=new Data();
