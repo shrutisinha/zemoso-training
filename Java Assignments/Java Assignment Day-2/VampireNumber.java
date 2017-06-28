@@ -29,7 +29,7 @@ public class VampireNumber {
 					count++;
 					vamp.add(num);
 					Collections.sort(vamp);
-					System.out.println(i+" * "+j+" = "+num+"  and count is "+count);
+					//System.out.println(i+" * "+j+" = "+num+"  and count is "+count);
 				}
 			}
 		}
