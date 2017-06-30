@@ -7,7 +7,9 @@ package question2;
 */
 
 class Cycle{
-	
+	public void ride(){
+		System.out.println("Riding "+this);
+	}
 }
 
 class Unicycle extends Cycle{
@@ -15,23 +17,29 @@ class Unicycle extends Cycle{
 	public void balance(){
 		System.out.println("Balancing on Unicycle");
 	}
+	public String toString(){
+		return "Unicycle";
+	}
 }
 
 class Bicycle extends Cycle{
 	
 	public void balance(){
 		System.out.println("Balancing on Bicycle");
-		}
+	}
+	public String toString(){
+		return "Bicycle";
+	}
 }
 	
 class Tricycle extends Cycle{
-	
+	public String toString(){
+		return "Tricycle";
+	}
 }
 	
 public class Question2 {
-	public static void ride(Cycle c){
-		System.out.println("Riding a " + c.toString());
-	}
+	
 	public static void main(String[] args) {
 		//Creating instance of all three types and upcast to array of Cycles
 		Cycle[] c = {
@@ -39,6 +47,7 @@ public class Question2 {
 				new Bicycle(),
 				new Tricycle()
 		};
+		c[0].ride();
 
 		/* Error "Cannot find symbol. symbol: method balance()  location: class Cycle"
 		 * appears on compiling the below commented segment since balance method is not

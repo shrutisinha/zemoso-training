@@ -6,16 +6,12 @@ package question1;
  * methods of Rodent abstract whenever possible and all classes should have default constructors that print 
  * a message about that class.
  */
-class Rodent{
+abstract class Rodent{
 		Rodent(){
 		System.out.println("In Rodent Class Constructor.");
 	}
-	void eat(){
-		//System.out.println("Rodent is eating.");
-	}
-	void jump(){
-		//System.out.println("Rodent is jumping.");
-	}
+	abstract void eat();
+	abstract void jump();
 	
 }
 class Mouse extends Rodent {
