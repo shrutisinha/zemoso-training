@@ -35,31 +35,4 @@ public class SList<T>{
 		return new SListIterator<T>(head);
 	}
 }
-// /**
-// *This forms the nodes of SList. Each Link object in the list contains information about itself and a reference
-// * to the next element in the list.
-// */
-// class Link<T>{
-// 	T item;
-// 	Link<T> next;
-// 	Link(T item, Link<T> next) { 
-// 		this.item = item;
-// 		this.next = next; 
-// 	}
-// 	Link(T item) {
-// 		this(item, null);
-// 	} 
-// 	Link(){
-// 		this(null,null);
-// 	}	
-// 	/**
-// 	*It is used everytime we need a string represantaion of Object,
-// 	*@return Information about calling object.
-// 	*/
-// 	public String toString() {
-// 		if(item == null) return "null";
-// 		return item.toString();
 
-// 	}
-
-// }
