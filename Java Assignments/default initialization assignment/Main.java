@@ -17,19 +17,17 @@ public class Main {
 		 *using new keywords are initialized by default
 		 */
 		Singleton obj2= Singleton.create_obj("shruti");
-		obj2.print();
 		/* since in this code we have initialised the member 
 		 * variable of obj2 to "shruti", the output prints "shruti"
 		 */
+		obj2.print();
+		//below code proves only one instance of singleton class can be created.
+		//All objects created are the same
+		Singleton obj3= Singleton.create_obj("suruti");
+		obj2.print();
+		obj3.print();
+		
 	}
 }
 
-//how to compile this program in terminal
-/* javac -d .. Data.java 
-   javac -d . Data.java 
-   javac -d .. Singleton.java  
-   javac -d . Singleton.java 
-   javac -d .. Main.java 
-   javac -d . Main.java 
-   java shruti.assignment.main.Main
-*/
+
